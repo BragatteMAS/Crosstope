@@ -16,9 +16,9 @@ def download_file(url, adress):
 
 if __name__ == "__main__":
     BASE_URL = 'http://www.crosstope.com/uploads/Imagens_GRASP/V5/A0201_000{}_V5.jpg'
-    OUTPUT_DIR = 'output'
+    OUTPUT_DIR = ''all_images'
     for i in range(1,4):
-            name_file = os.path.join(OUTPUT_DIR, f'crosstope_{i}.jpg')
+            name_file = os.path.join(OUTPUT_DIR, f'crosstope_{i}.png')
             download_file(BASE_URL.format(i),name_file)
             
 

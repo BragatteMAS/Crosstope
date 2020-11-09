@@ -21,7 +21,7 @@ if __name__== "__main__": #(url, name)
     #inside {} should be the variable part from url database
     BASE_URL = 'http://www.crosstope.com/download?file=Imagens_GRASP\V5\A0201_0001_V5.jpg&fileName=A0201_0001_V5.jpg'
     #create a variable for outputs
-    OUTPUT_DIR = 'output'
+    OUTPUT_DIR = 'all_images'
     #iteration for to multiple files
     for i in range(1,2):#start,stop
         #generate files as outputs.jpg
