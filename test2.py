@@ -38,7 +38,7 @@ def download_images(url):
   
     print ("All images downloaded!")
     return
-
+ 
 if __name__ == "__main__":
     #BASE_URL
     url= 'http://www.crosstope.com/uploads/Imagens_GRASP/V5/'
