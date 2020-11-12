@@ -15,14 +15,8 @@ def download_file(url, adress):
         answer.raise_for_status()
 
 if __name__ == "__main__":
-    BASE_URL = 'http://www.crosstope.com/uploads/Imagens_GRASP/V5/A0201_000{}_V5.jpg'
-    OUTPUT_DIR = ''all_images'
-    for i in range(1,4):
-            name_file = os.path.join(OUTPUT_DIR, f'crosstope_{i}.png')
-            download_file(BASE_URL.format(i),name_file)
-            
-
-##############################
-#'http://www.crosstope.com/download?file=Imagens_GRASP\V5\A0201_0001_V5.jpg&fileName=A0201_0001_V5.jpg'
-#http://www.crosstope.com/uploads/Imagens_GRASP/V5/A0201_0001_V5.jpg
-#http://www.crosstope.com/uploads/Imagens_GRASP/V5/A0201_0108_V5.jpg
+    BASE_URL = 'http://www.crosstope.com/uploads/Imagens_GRASP/V5/{}.jpg'
+    OUTPUT_DIR = 'asnyc' #need this folder
+    for page in BASE_URL:
+            name_file = os.path.join(OUTPUT_DIR, f'{page}.png')
+            download_file(BASE_URL.format(page),name_file)
