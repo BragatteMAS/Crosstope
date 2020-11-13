@@ -3,6 +3,8 @@
 
 import requests, os, bs4
 from requests import get
+from requests import get
+from bs4 import BeautifulSoup
 
 domain = "http://www.crosstope.com"
 #define separated html page dir
