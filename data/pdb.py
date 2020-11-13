@@ -1,9 +1,7 @@
-#%%
 #pdb.py
 #Ref.:https://www.youtube.com/watch?v=MjwWzBiAMck / refactor by Bragatte
 
 import requests, os, bs4
-from requests import get
 from requests import get
 from bs4 import BeautifulSoup
 
@@ -24,3 +22,4 @@ for link in soup.find_all('a'):
         with open(file_name, "wb") as file:
             response = get(domain + url)
             file.write(response.content)
+pwd
