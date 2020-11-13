@@ -10,7 +10,7 @@ import pymol
 pymol.pymol_argv = ['pymol','-qc'] + sys.argv[1:]
 pymol.finish_launching()
 #def test():
-os.chdir("/home/bragatte/Documentos/Fitting")
+os.chdir("/home/bragatte/Documentos/Fitting") # here edit the path
 cmd = pymol.cmd
 
 for file in glob.glob("*.pdb"):
@@ -26,10 +26,11 @@ for file in glob.glob("*.pdb"):
 	os.system("rm alvo.pdb")
 	cmd.reinitialize()
 			
-#Script para colocar o pMHC na posição padrão do banco de dados CrossTope.
-#Toda vez que for rodar o script precisa criar uma pasta com:
-	#script propriamente dito "fitting.py"
-	#arquivo.txt para ser o molde da posição (coordenadas previamente definidas = "D2V-NS4a140_148"
-	#.pdb que queres colocar na posição esperada, podem ser colocados vários...revisar se foi para posição correta.
-#No script precisa ser modificada a linha 13, alterando para o nome da pasta que estiver os arquivos.
-# Linha de comando para rodar: python fitting.py
+#Script to replace pMHC in the default position of the CrossTope database.
+#Every time you run the script you need to create a folder with:
+	#script "fitting.py"
+	#file ".txt" to be the position template (previously defined coordinates = "D2V-NS4a140_148"
+	#.pdb you want to place in the expected position.
+	#Multiple pdbs could be replaced at the same run script ... check if it went to the correct position.
+#In the script, line 13 MUST be modified, changing to the name of the folder containing the files.
+# Command line to run: python fitting.py
