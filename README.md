@@ -1,2 +1,2 @@
 # Crosstope
- Scripts to use related to www.crosstope.com
+ Scripts for www.crosstope.com
