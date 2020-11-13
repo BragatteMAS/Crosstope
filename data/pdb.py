@@ -22,4 +22,3 @@ for link in soup.find_all('a'):
         with open(file_name, "wb") as file:
             response = get(domain + url)
             file.write(response.content)
-pwd
