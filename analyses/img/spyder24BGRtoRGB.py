@@ -6,10 +6,10 @@ REF.:/watch?v=E_XZHQkQBBU&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=25
 @author: bragatte
 """
 from skimage import io
-#img = io.imread('Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
+img = io.imread('Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
-img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')
+#img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/bragatte.jpeg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
 
@@ -36,7 +36,7 @@ cv2.imwrite("Crosstope/data/images/saved_using_opencv.jpg", gaussian_img)
 #so first convert float to 8 bit
 from skimage import img_as_ubyte
 gaussian_img_8bit = img_as_ubyte(gaussian_img)
-cv2.imwrite("Crosstope/data/images/saved_using_opencv2.jpg", gaussian_img_8bit)
+cv2.imwrite("Crosstope/data/images/saved_using_opencvBGR.jpg", gaussian_img_8bit)
 
 #This saves fine and the image should be fine but ...
 #The colors may be weird, if you are saving color images.
@@ -55,4 +55,4 @@ cv2.imwrite("Crosstope/data/images/saved_using_opencv3.jpg", gaussian_img_8bit_R
 #Or, convert images from BGR to RGB when necessary.
 
 gaussian_img_8bit_RGB = cv2.cvtColor(gaussian_img_8bit, cv2.COLOR_BGR2RGB)
-cv2.imwrite("Crosstope/data/images/saved_using_opencv3.jpg", gaussian_img_8bit_RGB)
+cv2.imwrite("Crosstope/data/images/saved_using_opencvRGB.jpg", gaussian_img_8bit_RGB)

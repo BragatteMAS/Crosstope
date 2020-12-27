@@ -14,13 +14,10 @@ skimage and opencv directly store imported images as numpy arrays.
 Pillow library is fine but it does not convert to numpy array by default.
 Need to convert as a separate step... np.asarray(img)
 """
-# to install scikit-image, pip install scikit-image 
-# to import the package you need to use import skimage
-
 from skimage import io
 
 img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
-#img = io.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png")
+#img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
 print(img.shape)  #y,x,c
 
 #x = Width = 1376
@@ -67,8 +64,10 @@ Instead of these three flags, you can simply pass integers 1, 0 or -1 respective
 
 import cv2
 
-grey_img = cv2.imread("/petroniocandido.github.io/img/profile.jpg", 0)
-color_img = cv2.imread("/petroniocandido.github.io/img/profile.jpg", 1)
+grey_img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg',0)
+color_img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg',1)
+#grey_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png", 0)
+#color_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png", 1)
 
 #images opened using cv2 are numpy arrays
 print(type(grey_img)) 
