@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Dec 26 18:54:49 2020
-
 @author: bragatte
 """
 from skimage import io, filters

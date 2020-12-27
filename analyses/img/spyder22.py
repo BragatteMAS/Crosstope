@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-REF.:Video Playlist: https://www.youtube.com/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
 Created on Sat Dec 26 21:09:27 2020
 @author: bragatte
 
@@ -20,7 +19,7 @@ Need to convert as a separate step... np.asarray(img)
 
 from skimage import io
 
-img = io.imread('/home/bragatte/Documentos/GitHub/petroniocandido.github.io/img/profile.jpg')
+img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
 #img = io.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png")
 print(img.shape)  #y,x,c
 
