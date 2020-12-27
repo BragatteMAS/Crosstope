@@ -10,7 +10,7 @@ pyplot (edit mode) and opencv
 skimage can also be used.. io.imshow
 """
 from skimage import io
-img = io.imread('Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
+img = io.imread('/home/bragatte/Documentos/GitHub//Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')
@@ -33,7 +33,6 @@ plt.imshow(img_gray, cmap="jet") #att neutral areas
 
 #Multiple plots using pyplot
 fig = plt.figure(figsize=(10, 10))
-
 ax1 = fig.add_subplot(2,2,1)
 ax1.imshow(img_gray, cmap='hot')
 ax1.title.set_text('1st')
