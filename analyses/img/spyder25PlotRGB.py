@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Dec 27 18:58:33 2020
-REF.:playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
+REF.:watch?PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
 @author: bragatte
 
 display of images
@@ -10,7 +10,7 @@ pyplot (edit mode) and opencv
 skimage can also be used.. io.imshow
 """
 from skimage import io
-img = io.imread('/home/bragatte/Documentos/GitHub//Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
+img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')
@@ -26,7 +26,7 @@ plt.imshow(img)
 plt.imshow(img, cmap="hot")
 #Not going to do anything as the input image is RGB
 
-img_gray = io.imread("Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", as_gray=True)
+img_gray = io.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", as_gray=True)
 plt.imshow(img_gray, cmap="hot")
 plt.imshow(img_gray, cmap="jet") #att neutral areas
 
@@ -50,29 +50,23 @@ ax4.imshow(img_gray, cmap='nipy_spectral')
 ax4.title.set_text('4th')
 plt.show()
 
-
-
 ############################################
-#Using opencv
+#Using opencv = probably the best for multiple figs
+import cv2 
 
-import cv2
+gray_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", 0)
+color_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", 1)
 
-gray_img = cv2.imread("Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", 0)
-color_img = cv2.imread("Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", 1)
-
+#transform BGR into RGB or vice versa
+img_RGB = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
 # Use the function cv2.imshow() to display an image in a window. 
 # First argument is the window name which is a string. second argument is our image. 
 
-cv2.imshow("pic from skimage import", img)  #Shows weird colors as R and B channels are swapped
+cv2.imshow("pic from skimage import", img_RGB)  #Shows weird colors as R and B channels are swapped
 cv2.imshow("color pic from opencv", color_img)
 cv2.imshow("gray pic from opencv", gray_img)
-
-# Maintain output window until 
-# user presses a key or 1000 ms (1s)
-cv2.waitKey(0)          
-
-#destroys all windows created
+# Maintain output window until user presses a key or 1000 ms (1s)
+cv2.waitKey(0)           
+#destroys all windows created if ms are define
 cv2.destroyAllWindows() 
-
-
