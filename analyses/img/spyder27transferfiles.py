@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Dec 27 20:31:55 2020
-REF.:watch?v=Z90KEqJoC3w&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=28
+REFs.:
+watch?v=Z90KEqJoC3w&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=28
+watch?v=j6GNtqrwcNE&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=29
 @author: bragatte
 
 #The glob module finds all the path names 
