@@ -19,8 +19,9 @@ img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zi
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/bragatte.jpeg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
 ##########
+
 #import the library opencv
-import cv2, glob, os
+import cv2, glob, os 
 
 file_list = glob.glob('data/images/grasp/zikv/*.*') #Returns a list of file names
 print(file_list)  #Prints the list containing file names
@@ -52,7 +53,7 @@ plt.imshow(my_list[2])  #View the 3rd image in the list.
 #            img_name.write(img_name)
 ########################################################################
 
-            
+
 img_name = 1  #Start an iterator for image number. VERIFICAR SCRIPT NOME
 #This number can be later added to output image file names.
 
