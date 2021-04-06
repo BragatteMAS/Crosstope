@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Dec 26 18:54:49 2020
+[REF](/watch?v=F9-63_otgho&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=21)actor by
 @author: bragatte
 """
 from skimage import io, filters

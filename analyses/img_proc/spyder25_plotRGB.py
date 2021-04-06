@@ -5,11 +5,16 @@ Created on Sun Dec 27 18:58:33 2020
 REF.:watch?PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG
 @author: bragatte
 
+scikit-image: pip install scikit-image
+opencv: pip install opencv-python
+
 display of images
 pyplot (edit mode) and opencv
 skimage can also be used.. io.imshow
 """
 from skimage import io
+
+#call imgs
 img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')

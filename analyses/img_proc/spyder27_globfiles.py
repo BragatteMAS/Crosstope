@@ -2,16 +2,20 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Dec 27 20:31:55 2020
-REFs.:
-watch?v=Z90KEqJoC3w&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=28
-watch?v=j6GNtqrwcNE&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=29
+[REFs]
+(watch?v=Z90KEqJoC3w&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=28)
+(watch?v=j6GNtqrwcNE&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=29)actors by
 @author: bragatte
+
+scikit-image: pip install scikit-image
+opencv: pip install opencv-python
 
 #The glob module finds all the path names 
 #matching a specified pattern according to the rules used by the Unix shell
 #The glob.glob returns the list of files with their full path 
 """
 ##########
+from skimage import io
 img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
@@ -21,9 +25,9 @@ img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zi
 ##########
 
 #import the library opencv
-import cv2, glob, os 
+import cv2, glob
 
-file_list = glob.glob('data/images/grasp/zikv/*.*') #Returns a list of file names
+file_list = glob.glob('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/*.*') #Returns a list of file names
 print(file_list)  #Prints the list containing file names
 
 #Now let us load each file at a time...
@@ -36,7 +40,7 @@ for file in glob.glob(path):   #Iterate through each file in the list using for
     
 #View images from the stored list
 from matplotlib import pyplot as plt
-plt.imshow(my_list[2])  #View the 3rd image in the list.
+plt.imshow(my_list[0])  #View the 3rd image in the list.
 
 ########################################################################
 #for file in path:
@@ -63,11 +67,13 @@ img_name = 1  #Start an iterator for image number. VERIFICAR SCRIPT NOME
 #    cv2.destroyAllWindows()
     
 #process each image - change color from BGR to RGB.
-    trgb = cv2.cvtColor(imgs, cv2.COLOR_BGR2RGB)  #Change color space from BGR to RGB
-    cv2.imwrite("data/images/grasp/zikv/"+str(img_name)+".jpg", trgb)
-    img_name +=1 #FALTANDO ITERAÇÃO FUNCIONAR
-    cv2.imshow('zikv', trgb)
-    cv2.waitKey(1000)  #Display each image for 1 second
-    cv2.destroyAllWindows()
+    #Change color space from BGR to RGB    
+trgb = cv2.cvtColor(imgs, cv2.COLOR_BGR2RGB)  
+cv2.imwrite("data/images/grasp/zikv/"+str(img_name)+".jpg", trgb)
+img_name +=1 #FALTANDO ITERAÇÃO FUNCIONAR
+cv2.imshow('zikv', trgb)
+cv2.waitKey(1000)  #Display each image for 1 second
+cv2.destroyAllWindows()
 
 #######################################################################################
+

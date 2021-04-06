@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Dec 27 17:27:58 2020
-REF.:/watch?v=YuHaD-yG_D4&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=24
+[REF](/watch?v=YuHaD-yG_D4&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=24)actor by
 @author: bragatte
 """
 from skimage import io
-#img = io.imread('Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
+img = io.imread('data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
 #img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')
-img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
+#img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg') #works on photos
 
 img1=img[:, :, :]
 print(img1.shape)

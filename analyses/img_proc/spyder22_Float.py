@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Dec 26 21:09:27 2020
+[REF](/watch?v=Q5yVpymvjxU&list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG&index=23)actor by
 @author: bragatte
 
 Reading images into Python.
@@ -16,8 +17,8 @@ Need to convert as a separate step... np.asarray(img)
 """
 from skimage import io
 
-img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
-#img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
+#img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg')
+img = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png')
 print(img.shape)  #y,x,c
 
 #x = Width = 1376
@@ -40,10 +41,10 @@ img3 = img.astype(np.float)
 from skimage import img_as_ubyte
 img_8bit = img_as_ubyte(img2)
 
-####################################################
+###############################################################################
 #OPENCV
 
-#################################################################################
+###############################################################################
 ######### Using openCV #########
 
 """
@@ -59,15 +60,13 @@ cv2.IMREAD_COLOR : Loads a color image. Any transparency of image will be neglec
 cv2.IMREAD_GRAYSCALE : Loads image in grayscale mode
 cv2.IMREAD_UNCHANGED : Loads image as such including alpha channel
 Instead of these three flags, you can simply pass integers 1, 0 or -1 respectively.
-
 """
 
 import cv2
-
-grey_img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg',0)
-color_img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg',1)
-#grey_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png", 0)
-#color_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png", 1)
+#grey_img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg',0)
+#color_img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/mas.jpeg',1)
+grey_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png", 0)
+color_img = cv2.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/pymol/A0201_0002.png", 1)
 
 #images opened using cv2 are numpy arrays
 print(type(grey_img)) 
@@ -75,12 +74,4 @@ print(type(color_img))
 
 #Big difference between skimage imread and opencv is that 
 #opencv reads images as BGR instead of RGB.
-
 img_opencv = cv2.cvtColor(color_img, cv2.COLOR_BGR2RGB) #Should be same as skimage image
-
-
-
-
-
-
-

@@ -18,9 +18,8 @@ import numpy as np
 a=np.ones((5,5))
 
 import pandas as pd
-df = pd.read_csv()
-print(df.head())
+df = pd.read_csv(...)
+print(df.head(...))
 
 from matplotlib import pyplot as plt
 plt.imshow(img2)
-
