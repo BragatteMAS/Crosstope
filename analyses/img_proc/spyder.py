@@ -12,16 +12,15 @@ Created on Sat Dec 26 18:06:27 2020
 scikit-image: pip install scikit-image
 opencv: pip install opencv-python
 """
-pip install skimage
 
 #scikit-learn
 from skimage import io #read RGB
-img1 = io.imread('C:\Users\marce\Documents\GitHub\Crosstope\data\images\grasp\A0201_0001_V5.jpg') #win
+img1 = io.imread('data\images\grasp\A0201_0001_V5.jpg') #win
 #img1 = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #imgt1= io.imread('/home/bragatte/Documentos/GitHub/html-css/Estudos/html-css/ex000/cross200.png')
 
 import cv2 #read BRG
-img2 = cv2.imread('C:\Users\marce\Documents\GitHub\Crosstope\data\images\grasp\A0201_0001_V5.jpg')
+img2 = cv2.imread('data\images\grasp\A0201_0001_V5.jpg')
 #img2 = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 #imgt2= cv2.imread('/home/bragatte/Documentos/GitHub/html-css/Estudos/html-css/ex000/cross200.png')
 
