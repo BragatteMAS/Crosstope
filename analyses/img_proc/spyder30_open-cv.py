@@ -26,7 +26,7 @@ img = cv2.imread("data\images\grasp\A0201_0001_V5.jpg", 1)   #Color is BGR not R
 #Use INTER_AREA for shrinking
 #Following xample zooms by 2 times.
 
-resized = cv2.resize(img, None, fx=2, fy=2, interpolation = cv2.INTER_CUBIC)
+resized = cv2.resize(img, None, fx=1, fy=1, interpolation = cv2.INTER_CUBIC)
 
 cv2.imshow("original pic", img)
 cv2.imshow("resized pic", resized)
