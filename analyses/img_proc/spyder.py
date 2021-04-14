@@ -2,24 +2,22 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Dec 26 18:06:27 2020
-
+[REF](/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG)actor by
 @author: bragatte
+# sections || code
+## tips
+### comments
 """
 #scikit-learn
-from skimage import io #read RGB
+from skimage import io ##read RGB
 img1 = io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 imgt1= io.imread('/home/bragatte/Documentos/GitHub/html-css/Estudos/html-css/ex000/cross200.png')
+img1_noise= io.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K_noise.png')
+io.imshow(img1_noise)
 
-import cv2 #read BRG
+import cv2 ##read BRG
 img2 = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg')
 imgt2= cv2.imread('/home/bragatte/Documentos/GitHub/html-css/Estudos/html-css/ex000/cross200.png')
-
-import numpy as np
-a=np.ones((5,5))
-
-import pandas as pd
-df = pd.read_csv(...)
-print(df.head(...))
-
+img2_noise= cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K_noise.png')
 from matplotlib import pyplot as plt
-plt.imshow(img2)
+plt.imshow(img2_noise)

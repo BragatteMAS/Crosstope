@@ -35,7 +35,7 @@ os.path.join() method in Python join one or more path components intelligently.
 import os
 print(os.walk(".")) #Nothing to see here as this is just a generator object
 
-#Nothing to see here as this is just a generator object
+###Nothing to see here as this is just a generator object
 for root, dirs, files in os.walk("."):
     #print (root) #print root dir names
     
@@ -43,5 +43,5 @@ for root, dirs, files in os.walk("."):
     #print(path)  #Gives names of directories for easy location of files
     #print(files)   #Prints all file names in all directories
     
-#Let us now visualize directories and files within them
+###Let us now visualize directories and files within them
     print((len(path))-1) * '

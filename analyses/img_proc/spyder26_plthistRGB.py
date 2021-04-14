@@ -26,7 +26,7 @@ y=[1,4,9,16,25,36]
 plt.plot(x,y)
 
 import numpy as np
-#transform ino array
+###transform ino array
 a = np.array(x)
 b = np.array(y)
 plt.plot(a,b)
@@ -44,7 +44,7 @@ eletro_img_8bit = img_as_ubyte(eletro_img) #floatto8bit
 cv2.imwrite("/home/bragatte/Documentos/GitHub/Crosstope/data/images/eletro_img_opencvBGR.jpg", eletro_img_8bit) #save output
 
 plt.imshow(eletro_img, cmap="bwr") #bwr,RdBu,coolwarm,seismic
-#WHY CAN APPLY COLOR MAPS INTO FIGS WITH NO 0 FLAG?
+###WHY CAN APPLY COLOR MAPS INTO FIGS WITH NO 0 FLAG?
 
 #Histogram of RGB
 plt.hist(eletro_img.flat, bins=100, range=(0,255))

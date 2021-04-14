@@ -30,7 +30,7 @@ import cv2, glob
 file_list = glob.glob('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/*.*') #Returns a list of file names
 print(file_list)  #Prints the list containing file names
 
-#Now let us load each file at a time...
+###Now let us load each file at a time...
 my_list=[]  #Empty list to store images from the folder.
 path = "data/images/grasp/zikv/*.*"
 for file in glob.glob(path):   #Iterate through each file in the list using for
@@ -38,7 +38,7 @@ for file in glob.glob(path):   #Iterate through each file in the list using for
     imgs= cv2.imread(file)  #now, we can read each file since we have the full path
     my_list.append(imgs)  #Create a list of images (not just file names but full images)
     
-#View images from the stored list
+###View images from the stored list
 from matplotlib import pyplot as plt
 plt.imshow(my_list[0])  #View the 3rd image in the list.
 
@@ -58,16 +58,16 @@ plt.imshow(my_list[0])  #View the 3rd image in the list.
 ########################################################################
 
 
-img_name = 1  #Start an iterator for image number. VERIFICAR SCRIPT NOME
-#This number can be later added to output image file names.
+img_name = 1  ###Start an iterator for image number. VERIFICAR SCRIPT NOME
+###This number can be later added to output image file names.
 
-#let us look at each file
+###let us look at each file
 #    cv2.imshow('Original Image', a)
 #    cv2.waitKey(0)
 #    cv2.destroyAllWindows()
     
 #process each image - change color from BGR to RGB.
-    #Change color space from BGR to RGB    
+    ##Change color space from BGR to RGB    
 trgb = cv2.cvtColor(imgs, cv2.COLOR_BGR2RGB)  
 cv2.imwrite("data/images/grasp/zikv/"+str(img_name)+".jpg", trgb)
 img_name +=1 #FALTANDO ITERAÇÃO FUNCIONAR

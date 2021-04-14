@@ -15,7 +15,7 @@ img = io.imread('data/images/grasp/zikv/ALPVYLMTL_5K.jpg')
 img1=img[:, :, :]
 print(img1.shape)
 
-#Next, let us extract each channel image.
+###Next, let us extract each channel image.
 img2=img1[0,:,:]  #First channel, Red
 img3=img1[1,:,:] #Second channel, Green
 img4=img1[2,:,:] #Third channel, Blue DAPI
