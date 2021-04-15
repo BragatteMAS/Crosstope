@@ -22,7 +22,7 @@ median_using_cv2 = cv2.medianBlur(img, 3) #3 kernel size
 
 from skimage.morphology import disk  
 ###
-disc_example =  disk(3)
+disc_example =  disk(2)
 disc_example
 ###
 #Disk creates a circular structuring element, similar to a mask with specific radius

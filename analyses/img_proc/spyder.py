@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+'''
 Created on Sat Dec 26 18:06:27 2020
 [REF](/playlist?list=PLHae9ggVvqPgyRQQOtENr6hK0m1UquGaG)actor by
 @author: bragatte
@@ -14,7 +14,7 @@ Created on Sat Dec 26 18:06:27 2020
 
 scikit-image: pip install scikit-image
 opencv: pip install opencv-python
-"""
+'''
 
 #scikit-learn
 from skimage import io ##read RGB
