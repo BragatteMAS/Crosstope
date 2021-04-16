@@ -7,8 +7,7 @@ Created on Thu Apr 15 14:34:50 2021
 
 [cv2.cv2.bilateralFilter](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_filtering/py_filtering.html)
 [skimage bilateral](https://scikit-image.org/docs/dev/auto_examples/filters/plot_denoise.html)
-h
-ttps://people.csail.mit.edu/sparis/bf_course/course_notes.pdf
+https://people.csail.mit.edu/sparis/bf_course/course_notes.pdf
 
 Bilateral is slow and not very efficient at salt and pepper
 """
