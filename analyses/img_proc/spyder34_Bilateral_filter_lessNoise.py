@@ -26,7 +26,12 @@ bilateral_using_cv2 = cv2.bilateralFilter(img, 5, 20, 100, borderType=cv2.BORDER
 ###sigmaCOlor - Sigma of grey/color space. 
 ###sigmaSpace - Large value means farther pixels influence each other (as long as the colors are close enough)
 
+cv2.imshow("Original", img)
+cv2.imshow("cv2 bilateral", bilateral_using_cv2)
+cv2.waitKey(0)          
+cv2.destroyAllWindows() 
 
+'''
 ## Slower than OPEN-CV
 from skimage.restoration import denoise_bilateral
 bilateral_using_skimage = denoise_bilateral(img, sigma_color=0.05, sigma_spatial=15,multichannel=False)
@@ -36,8 +41,7 @@ bilateral_using_skimage = denoise_bilateral(img, sigma_color=0.05, sigma_spatial
 ##sigma_spatial: float. Standard ev. for range distance. Increasing this smooths larger features.
 
 cv2.imshow("Original", img)
-cv2.imshow("cv2 bilateral", bilateral_using_cv2)
 cv2.imshow("Using skimage bilateral", bilateral_using_skimage)
-
 cv2.waitKey(0)          
 cv2.destroyAllWindows() 
+'''
