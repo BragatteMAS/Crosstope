@@ -19,6 +19,10 @@ BM3D_denoised_image = bm3d.bm3d(noisy_img, sigma_psd=0.05, stage_arg=bm3d.BM3DSt
 Best Denoising pack:
     Could use in color img
     0.5 sigma great results
+    
+Requeriments OpenBlas lib:
+    conda install -c jasonb857 libopenblas
+    
 bm3d library is not well documented yet, but looking into source code....
 sigma_psd - noise standard deviation
 stage_arg: Determines whether to perform hard-thresholding or Wiener filtering.

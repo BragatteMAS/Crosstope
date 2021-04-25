@@ -31,17 +31,13 @@ that the Fourier transform approximates their correct derivative relationship.
                                          
 """
 
-
-
 from skimage import io, filters, feature
 import matplotlib.pyplot as plt
 from skimage.color import rgb2gray
 import cv2
 import numpy as np
 
-
-img = cv2.imread('images/sandstone.tif', 0)
-
+img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg', 0)
 
 #Edge detection
 from skimage.filters import roberts, sobel, scharr, prewitt, farid
