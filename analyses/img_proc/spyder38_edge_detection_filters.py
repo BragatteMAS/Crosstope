@@ -48,10 +48,4 @@ scharr_img = scharr(img)
 prewitt_img = prewitt(img)
 farid_img = farid(img)
 
-cv2.imshow("Roberts", roberts_img)
-cv2.imshow("Sobel", sobel_img)
-cv2.imshow("Scharr", scharr_img)
-cv2.imshow("Prewitt", prewitt_img)
-cv2.imshow("Farid", farid_img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+ 
