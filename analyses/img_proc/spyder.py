@@ -7,7 +7,7 @@ Created on Sat Dec 26 18:06:27 2020
 <<<<<<< HEAD
 # sections || code
 ## tips
-### comments
+### comments 
 
 ##Win10: C:\Users\marce\Documents\GitHub\Crosstope
 ##PopOS: ~/Documents/GitHub/Crosstope
