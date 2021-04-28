@@ -27,7 +27,7 @@ from skimage.transform import rescale
 ###gaussian smoothing can performed to avoid anti aliasing artifacts.
 img_rescaled = rescale(img, 1.0 / 4.0, anti_aliasing=False)
 ###Check rescales image size in variable explorer
-
+io.imshow(img_rescaled) 
 
 #Contrast img 
 ###A quick look at a few skimage functions
@@ -53,8 +53,8 @@ eletro_img_8bit = img_as_ubyte(eletro_img) #floatto8bit
 cv2.imwrite("/home/bragatte/Documentos/GitHub/Crosstope/data/images/eletro_img_opencvBGR.jpg", eletro_img_8bit) #save output
 plt.imshow(eletro_img, cmap="bwr") #bwr,RdBu,coolwarm,seismic
 ###WHY CAN APPLY COLOR MAPS INTO FIGS WITH NO 0 FLAG?
+
 ##Histogram of RGB
 plt.hist(eletro_img.flat, bins=100, range=(0,255))
-
 
 #
