@@ -46,28 +46,27 @@ mask[mask_area] = 0
 # Circular LPF mask, center circle is 1, remaining all zeros
 # Only allows low frequency components - smooth regions
 #Can smooth out noise but blurs edges.
-#
-
+"""
 rows, cols = img.shape
 crow, ccol = int(rows / 2), int(cols / 2)
 mask = np.zeros((rows, cols, 2), np.uint8)
-r = 100
+r = 500
 center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
 mask_area = (x - center[0]) ** 2 + (y - center[1]) ** 2 <= r*r
 mask[mask_area] = 1
-
+"""
 # Band Pass Filter - Concentric circle mask, only the points living in concentric circle are ones
 rows, cols = img.shape
 crow, ccol = int(rows / 2), int(cols / 2)
-mask = np.zeros((rows, cols, 2), np.uint8)
-r_out = 80
-r_in = 10
+mask = np.zeros((rows, cols, 2), np.uint8) #put the mask with the filter of edges?
+r_out = 500 # size of mask
+r_in = 1 #size of venter dot in the mask
 center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
 mask_area = np.logical_and(((x - center[0]) ** 2 + (y - center[1]) ** 2 >= r_in ** 2),
                            ((x - center[0]) ** 2 + (y - center[1]) ** 2 <= r_out ** 2))
-mask[mask_area] = 1
+mask[mask_area] = 1 #value of interest with 1
 
 # apply mask and inverse DFT: Multiply fourier transformed image (values)
 #with the mask values. 
