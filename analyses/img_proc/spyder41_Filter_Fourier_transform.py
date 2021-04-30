@@ -100,3 +100,6 @@ ax4 = fig.add_subplot(2,2,4)
 ax4.imshow(img_back, cmap='gray')
 ax4.title.set_text('After inverse FFT')
 plt.show()
+
+plt.imshow(img_back, cmap='gray')
+
