@@ -31,7 +31,7 @@ magnitude_spectrum = 20 * np.log(cv2.magnitude(dft_shift[:, :, 0], dft_shift[:, 
 ###Can be used for edge detection because low frequencies at center are blocked
 ###and only high frequencies are allowed. Edges are high frequency components.
 ###Amplifies noise.
-
+"""
 rows, cols = img.shape
 crow, ccol = int(rows / 2), int(cols / 2)
 
@@ -41,13 +41,13 @@ center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
 mask_area = (x - center[0]) ** 2 + (y - center[1]) ** 2 <= r*r
 mask[mask_area] = 0
-
+"""
 
 # Circular LPF mask, center circle is 1, remaining all zeros
 # Only allows low frequency components - smooth regions
 #Can smooth out noise but blurs edges.
 #
-"""
+
 rows, cols = img.shape
 crow, ccol = int(rows / 2), int(cols / 2)
 mask = np.zeros((rows, cols, 2), np.uint8)
@@ -56,6 +56,7 @@ center = [crow, ccol]
 x, y = np.ogrid[:rows, :cols]
 mask_area = (x - center[0]) ** 2 + (y - center[1]) ** 2 <= r*r
 mask[mask_area] = 1
+
 # Band Pass Filter - Concentric circle mask, only the points living in concentric circle are ones
 rows, cols = img.shape
 crow, ccol = int(rows / 2), int(cols / 2)
@@ -67,8 +68,6 @@ x, y = np.ogrid[:rows, :cols]
 mask_area = np.logical_and(((x - center[0]) ** 2 + (y - center[1]) ** 2 >= r_in ** 2),
                            ((x - center[0]) ** 2 + (y - center[1]) ** 2 <= r_out ** 2))
 mask[mask_area] = 1
-"""
-
 
 # apply mask and inverse DFT: Multiply fourier transformed image (values)
 #with the mask values. 
@@ -87,8 +86,6 @@ img_back = cv2.idft(f_ishift)
 #Magnitude spectrum of the image domain
 img_back = cv2.magnitude(img_back[:, :, 0], img_back[:, :, 1])
 
-
-
 fig = plt.figure(figsize=(12, 12))
 ax1 = fig.add_subplot(2,2,1)
 ax1.imshow(img, cmap='gray')
@@ -103,4 +100,3 @@ ax4 = fig.add_subplot(2,2,4)
 ax4.imshow(img_back, cmap='gray')
 ax4.title.set_text('After inverse FFT')
 plt.show()
-
