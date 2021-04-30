@@ -55,4 +55,17 @@ plt.imshow(eletro_img, cmap="bwr") #bwr,RdBu,coolwarm,seismic
 ##Histogram of RGB
 plt.hist(eletro_img.flat, bins=100, range=(0,255))
 
-#
+
+import numpy as np
+#DFT=Discrete Fourier Transform
+dft = cv2.dft(np.float32(img), flags=cv2.DFT_COMPLEX_OUTPUT)
+
+#Shift DFT. First check the output without the shift
+#Without shifting the data would be centered around origin at the top left
+#Shifting it moves the origin to the center of the image. 
+dft_shift = np.fft.fftshift(dft)
+
+#Calculate magnitude spectrum from the DFT (Real part and imaginary part)
+#Added 1 as we may see 0 values and log of 0 is indeterminate
+magnitude_spectrum = 20 * np.log((cv2.magnitude(dft_shift[:, :, 0], dft_shift[:, :, 1]))+1)
+
