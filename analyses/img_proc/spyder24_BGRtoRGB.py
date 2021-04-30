@@ -38,6 +38,7 @@ cv2.imwrite("data/images/saved_using_opencv.jpg", gaussian_img)
 from skimage import img_as_ubyte
 gaussian_img_8bit = img_as_ubyte(gaussian_img)
 cv2.imwrite("data/images/saved_using_opencvBGR.jpg", gaussian_img_8bit)
+io.imshow(gaussian_img_8bit) 
 
 ###This saves fine and the image should be fine but ...
 ###The colors may be weird, if you are saving color images.
@@ -52,8 +53,10 @@ cv2.imwrite("data/images/saved_using_opencvBGR.jpg", gaussian_img_8bit)
 
 gaussian_img_8bit_RGB = cv2.cvtColor(gaussian_img_8bit, cv2.COLOR_BGR2RGB)
 cv2.imwrite("data/images/saved_using_opencv3.jpg", gaussian_img_8bit_RGB) 
+io.imshow(gaussian_img_8bit_RGB) #invert image colors
 ###including reading and writing images.
 ###Or, convert images from BGR to RGB when necessary.
 
 gaussian_img_8bit_RGB = cv2.cvtColor(gaussian_img_8bit, cv2.COLOR_BGR2RGB)
 cv2.imwrite("data/images/saved_using_opencvRGB.jpg", gaussian_img_8bit_RGB)
+
