@@ -20,7 +20,6 @@ io.imshow(img)
 ### matplot
 plt.imshow(img)
 
-
 #Rescale
 from skimage.transform import rescale
 ##Always Rescale, Not resize##
@@ -39,7 +38,6 @@ plt.imshow(gaussian_using_skimage)
 img_gray = io.imread("data/images/grasp/zikv/ALPVYLMTL_5K.jpg", as_gray=True)
 sobel_img = sobel(img_gray)  #Works only on 2D (gray) images
 plt.imshow(sobel_img, cmap='gray')
-
 
 #Histogram
 import cv2
