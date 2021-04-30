@@ -6,7 +6,6 @@ Created on Fri Apr 30 10:55:56 2021
 @author: bragatte
 
 1.Low frequency at the center / high frequency around the edges(dfft)
-
 """
 
 import cv2
@@ -29,6 +28,7 @@ import numpy as np
 
 img = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/A0201_0001_V5.jpg', 0) # load an image
 
+#DFT=Discrete Fourier Transform
 dft = cv2.dft(np.float32(img), flags=cv2.DFT_COMPLEX_OUTPUT)
 
 #Shift DFT. First check the output without the shift
