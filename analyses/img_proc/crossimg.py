@@ -20,6 +20,35 @@ io.imshow(img)
 ### matplot
 #plt.imshow(img)
 
+#Plot images variations with matplotlib
+###Colormaps...  https://matplotlib.org/tutorials/colors/colormaps.html
+plt.imshow(img, cmap="hot")
+#Not going to do anything as the input image is RGB
+
+img_gray = io.imread("/home/bragatte/Documentos/GitHub/Crosstope/data/images/grasp/zikv/ALPVYLMTL_5K.jpg", as_gray=True)
+plt.imshow(img_gray, cmap="hot")
+plt.imshow(img_gray, cmap="jet") #att neutral areas
+
+
+#Multiple plots using pyplot
+fig = plt.figure(figsize=(10, 10))
+ax1 = fig.add_subplot(2,2,1)
+ax1.imshow(img_gray, cmap='hot')
+ax1.title.set_text('1st')
+
+ax2 = fig.add_subplot(2,2,2)
+ax2.imshow(img_gray, cmap='jet')
+ax2.title.set_text('2nd')
+
+ax3 = fig.add_subplot(2,2,3)
+ax3.imshow(img_gray, cmap='gray')
+ax3.title.set_text('3rd')
+
+ax4 = fig.add_subplot(2,2,4)
+ax4.imshow(img_gray, cmap='nipy_spectral')
+ax4.title.set_text('4th')
+plt.show()
+
 #Rescale
 from skimage.transform import rescale
 ##Always Rescale, Not resize##
@@ -41,10 +70,12 @@ plt.imshow(sobel_img, cmap='gray')
 
 #Histogram
 import cv2
-img2 = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')#,,0)
+img2 = cv2.imread('/home/bragatte/Documentos/GitHub/Crosstope/data/images/chimeraX/YLKPTTFML_A0201.jpg')#,0)
 plt.imshow(img2)
 eletro_img = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB) #bgr2rgb
 plt.imshow(eletro_img)
+
+
 
 from skimage import img_as_ubyte
 eletro_img_8bit = img_as_ubyte(eletro_img) #floatto8bit
