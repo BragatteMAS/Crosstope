@@ -42,7 +42,7 @@ clahe_img = clahe.apply(l)
 plt.hist(clahe_img.flat, bins=100, range=(0,255))
 
 #Combine the CLAHE enhanced L-channel back with A and B channels
-#updated_lab_img2 = cv2.merge((clahe_img,a,b))
+updated_lab_img2 = cv2.merge((clahe_img,a,b))
 
 #Convert LAB image back to color (RGB)
 CLAHE_img = cv2.cvtColor(updated_lab_img2, cv2.COLOR_LAB2BGR)
