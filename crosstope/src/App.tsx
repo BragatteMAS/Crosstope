@@ -5,6 +5,8 @@ import {
   InstantSearch,
   RefinementList,
   SearchBox,
+  SortBy,
+  Stats,
 } from "react-instantsearch-dom"
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
@@ -42,8 +44,9 @@ const App = () => (
   <InstantSearch indexName="sequences" searchClient={searchClient}>
     <main>
       <SearchBox />
+      <Content />
+      <Sidebar />
       <Hits hitComponent={HitComponent} />
-    </main>
     <aside>
       <h2>MHC Allele</h2>
       <RefinementList attribute="mhc_allele" />
@@ -52,9 +55,32 @@ const App = () => (
       <h2>Peptide Lenght</h2>
       <RefinementList attribute="peptide_lenght" />
     </aside>
+    </main>
   </InstantSearch>
 )
 
+const Content = () => (
+  <div className="content">
+    <div className="info" >
+      <Stats/>
+      <SortBy
+        defaultRefinement='instant_search'
+          items={[
+            { value: 'instant_search', label: 'Most Relevant' },
+            { value: 'mhc_allele', label: 'MHC Allele' },
+            { value: 'peptide_lenght', label: 'Peptide Lenght' },
+          ]}
+      />
+    </div>
+    <Hits hitComponent={HitComponent} /> 
+  </div>
+)
+
+const Sidebar = () => (
+  <div className="sidebar">
+  
+  </div> 
+)
 const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column", rowGap: "8px" }}>
