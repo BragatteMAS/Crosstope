@@ -1,12 +1,13 @@
 import algoliasearch from "algoliasearch/lite"
 import {
-  Highlight,
-  Hits,
   InstantSearch,
-  RefinementList,
   SearchBox,
-  SortBy,
+  Hits,
+  Highlight,
   Stats,
+  SortBy,
+  Pagination,
+  RefinementList,
 } from "react-instantsearch-dom"
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
@@ -47,14 +48,6 @@ const App = () => (
       <Content />
       <Sidebar />
       <Hits hitComponent={HitComponent} />
-    <aside>
-      <h2>MHC Allele</h2>
-      <RefinementList attribute="mhc_allele" />
-      <h2>Immunological Background</h2>
-      <RefinementList attribute="immunological_background" />
-      <h2>Peptide Lenght</h2>
-      <RefinementList attribute="peptide_lenght" />
-    </aside>
     </main>
   </InstantSearch>
 )
@@ -63,27 +56,31 @@ const Content = () => (
   <div className="content">
     <div className="info" >
       <Stats/>
-      <SortBy
-        defaultRefinement='instant_search'
-          items={[
-            { value: 'instant_search', label: 'Most Relevant' },
-            { value: 'mhc_allele', label: 'MHC Allele' },
-            { value: 'peptide_lenght', label: 'Peptide Lenght' },
-          ]}
-      />
-    </div>
-    <Hits hitComponent={HitComponent} /> 
+    </div> 
+  <Hits hitComponent={HitComponent}/>
+  <div className="pagination">
+    <Pagination showLast/>
+  </div>
   </div>
 )
 
 const Sidebar = () => (
   <div className="sidebar">
-  
+      <aside>
+      <h2>MHC Allele</h2>
+      <RefinementList attribute="mhc_allele" />
+      <h2>Immunological Background</h2>
+      <RefinementList attribute="immunological_background" />
+      <h2>Peptide Lenght</h2>
+      <RefinementList attribute="peptide_lenght" />
+      </aside>
+  <h5>Category</h5>
+  <RefinementList attributeName="mhc_allele"/>
   </div> 
 )
 const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", rowGap: "8px" }}>
+    <div style={{ display: "flex", flexDirection: "column", rowGap: "4px" }}>
       <img
         style={{ width: "100%", height: "auto" }}
         src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
