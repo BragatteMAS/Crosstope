@@ -92,17 +92,7 @@
     "markdown.extension.preview.autoShowPreviewToSide": true,
 
     "markdown.marp.outlineExtension": false,
-    "todo-tree.tree.showScanModeButton": false,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+
     
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
