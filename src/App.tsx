@@ -4,11 +4,11 @@ import {
   SearchBox,
   Hits,
   Highlight,
+  RefinementList,
   Stats,
   SortBy,
   Pagination,
-  RefinementList,
-} from "react-instantsearch-dom"
+} from "react-instantsearch-dom";
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
 
@@ -44,12 +44,17 @@ type Epitope = {
 const App = () => (
   <InstantSearch indexName="sequences" searchClient={searchClient}>
     <main>
+      <Sidebar />      
       <SearchBox />
       <Content />
-      <Sidebar />
-      <Hits hitComponent={HitComponent} />
     </main>
   </InstantSearch>
+)
+
+const Sidebar = () => (
+<div>
+
+</div>
 )
 
 const Content = () => (
@@ -57,6 +62,22 @@ const Content = () => (
     <div className="info" >
       <Stats/>
     </div> 
+  <aside>
+  <h2>Sidebar</h2> 
+    <RefinementList attributeName="structure_type" withSearchBox />
+    <RefinementList attributeName="source_organism" />
+    <RefinementList attributeName="source_protein" />
+    <RefinementList attributeName="mhc_allele" />
+    <RefinementList attributeName="complex_code" />
+    <RefinementList attributeName="deposition" />
+    <RefinementList attributeName="release" />
+    <RefinementList attributeName="last_modification" />
+    <RefinementList attributeName="immunological_background" />
+    <RefinementList attributeName="reference" />
+    <RefinementList attributeName="structure_source" />
+    <RefinementList attributeName="peptide_lenght" />
+    <RefinementList attributeName="structure_type" />
+  </aside>
   <Hits hitComponent={HitComponent}/>
   <div className="pagination">
     <Pagination showLast/>
@@ -64,30 +85,15 @@ const Content = () => (
   </div>
 )
 
-const Sidebar = () => (
-  <div className="sidebar">
-      <aside>
-      <h2>MHC Allele</h2>
-      <RefinementList attribute="mhc_allele" />
-      <h2>Immunological Background</h2>
-      <RefinementList attribute="immunological_background" />
-      <h2>Peptide Lenght</h2>
-      <RefinementList attribute="peptide_lenght" />
-      </aside>
-  <h5>Category</h5>
-  <RefinementList attributeName="mhc_allele"/>
-  </div> 
-)
 const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", rowGap: "4px" }}>
+    <div style={{ display: "flex", flexDirection: "column", rowGap: "6px" }}>
       <img
         style={{ width: "100%", height: "auto" }}
         src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
         alt={`visual representation of pMHC ${hit.sequence}`}
       />
-      <Highlight attribute="sequence" hit={hit} />
-      <Highlight attribute="epitope_position" hit={hit} />
+      <Highlight attribute="sequence" href={hit.source_protein} hit={hit} />
       <Highlight attribute="source_organism" hit={hit} />
       <Highlight attribute="source_protein" hit={hit} />
       <Highlight attribute="immunological_background" hit={hit} />

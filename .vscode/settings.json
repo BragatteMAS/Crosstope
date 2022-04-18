@@ -26,7 +26,7 @@
 
     "liveServer.settings.donotShowInfoMsg": true,
 
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "off",
     "files.maxMemoryForLargeFilesMB": 12496,
     "files.associations": {
         "*.rmd": "markdown",
@@ -75,26 +75,26 @@
     "notebook.lineNumbers": "on",
     "notebook.cellToolbarLocation": {
         "default": "right",
-        "jupyter-notebook": "left",
-        
+        "jupyter-notebook": "left"
+    },
+
     "vsicons.dontShowNewVersionMessage": true,
-    
+
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
     "diffEditor.ignoreTrimWhitespace": false,
-    
+
     "window.titleBarStyle": "custom",
 
     "redhat.telemetry.enabled": false,
-    
+
     "security.workspace.trust.untrustedFiles": "open",
     "markdown.extension.preview.autoShowPreviewToSide": true,
 
     "markdown.marp.outlineExtension": false,
 
-    
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Launchbase Theme",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "right",
     "workbench.editor.highlightModifiedTabs": false,
@@ -107,8 +107,4 @@
     "json.schemaDownload.enable": false,
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.settings.naturalLanguageSearch.enable": false,
-    "npm.fetchOnlinePackageInfo": false,
-    "typescript.disableAutomaticTypeAcquisition": false,
-    "git.ignoreLimitWarning": true
 }
