@@ -94,7 +94,7 @@
 
     "markdown.marp.outlineExtension": false,
 
-    "workbench.colorTheme": "Launchbase Theme",
+    "workbench.colorTheme": "Dracula Soft",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "right",
     "workbench.editor.highlightModifiedTabs": false,

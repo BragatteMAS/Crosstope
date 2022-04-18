@@ -53,7 +53,12 @@ const App = () => (
 
 const Sidebar = () => (
 <div>
-
+  <h2>MHC Allele (peptide aminoacids)</h2> 
+  <RefinementList attribute="peptide_lenght" withSearchBox /> 
+  <h2>Structure Type</h2> 
+  <RefinementList attribute="structure_type" withSearchBox /> 
+  <h2>Immunological background</h2>
+  <RefinementList attribute="immunological_background" withSearchBox />
 </div>
 )
 
@@ -61,23 +66,8 @@ const Content = () => (
   <div className="content">
     <div className="info" >
       <Stats/>
+
     </div> 
-  <aside>
-  <h2>Sidebar</h2> 
-    <RefinementList attributeName="structure_type" withSearchBox />
-    <RefinementList attributeName="source_organism" />
-    <RefinementList attributeName="source_protein" />
-    <RefinementList attributeName="mhc_allele" />
-    <RefinementList attributeName="complex_code" />
-    <RefinementList attributeName="deposition" />
-    <RefinementList attributeName="release" />
-    <RefinementList attributeName="last_modification" />
-    <RefinementList attributeName="immunological_background" />
-    <RefinementList attributeName="reference" />
-    <RefinementList attributeName="structure_source" />
-    <RefinementList attributeName="peptide_lenght" />
-    <RefinementList attributeName="structure_type" />
-  </aside>
   <Hits hitComponent={HitComponent}/>
   <div className="pagination">
     <Pagination showLast/>
@@ -87,18 +77,22 @@ const Content = () => (
 
 const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", rowGap: "6px" }}>
-      <img
-        style={{ width: "100%", height: "auto" }}
-        src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
-        alt={`visual representation of pMHC ${hit.sequence}`}
-      />
-      <Highlight attribute="sequence" href={hit.source_protein} hit={hit} />
-      <Highlight attribute="source_organism" hit={hit} />
-      <Highlight attribute="source_protein" hit={hit} />
-      <Highlight attribute="immunological_background" hit={hit} />
-      <Highlight attribute="peptide_lenght" hit={hit} />
-      <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> pdb file</a>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      rowGap: "4px",
+      }}>
+        <img
+          style={{ width: "100%", height: "auto" }}
+          src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
+          alt={`visual representation of pMHC ${hit.sequence}`}
+        />
+        <Highlight attribute="sequence" hit={hit} />
+        <Highlight attribute="source_organism" hit={hit} />
+        <Highlight attribute="source_protein" src="source_protein" link={hit.link_para_source_protein} hit={hit} />
+        <Highlight attribute="immunological_background" hit={hit} />
+        <Highlight attribute="peptide_lenght" hit={hit} />
+        <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> pdb file</a>
     </div>
   )
 }
