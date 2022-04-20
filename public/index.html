@@ -39,10 +39,11 @@
   
       gtag('config', 'UA-55120145-4');
     </script> 
+  </head>
   
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand js-scroll-trigger" href="index.html">
       <img src="%PUBLIC_URL%/img/logo_crosstope_192.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
       Crosstope
     </a> 
@@ -51,12 +52,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Dashboard">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span class="nav-link-text">Dashboard</span>
-          </a>
-        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Charts">
           <a class="nav-link" href="charts.html">
             <i class="fas fa-fw fa-chart-area"></i>
@@ -73,10 +68,14 @@
     </div>
   </nav>
   
-  </head>
-  
   <body>
-    <div id="root"></div>
-  </body> 
+    <div class="left-panel">
+      <div id="clear-refinements"></div>
+      <div id="RefinementList"></div>
+      
+    </div>
+  </div>  
+  <div id="root" >
+</body> 
 
 </html>

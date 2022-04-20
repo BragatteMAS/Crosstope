@@ -1,21 +1,28 @@
 import algoliasearch from "algoliasearch/lite"
 import {
-  InstantSearch,
-  SearchBox,
   Hits,
+  InstantSearch,
   Highlight,
   RefinementList,
+  SearchBox,
   Stats,
-  SortBy,
   Pagination,
+  DynamicWidgets,
+  Panel,
+  SortBy,
+  Menu,
 } from "react-instantsearch-dom";
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
+import { AbstractView } from "react";
+
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID,
   process.env.REACT_APP_ALGOLIA_API_KEY
 )
+
+const index = searchClient.initIndex("sequences");
 
 type Epitope = {
   sequence: string
@@ -45,27 +52,26 @@ const App = () => (
   <InstantSearch indexName="sequences" searchClient={searchClient}>
     <h2>CROSSTOPE</h2>
     <SearchBox />
+    <Sidebar/>
     <Content />
-    <Sidebar />
   </InstantSearch>
 )
 
 const Sidebar = () => (
-<aside>
-   <h3>MHC Allele (peptide aminoacids)</h3> 
-    <RefinementList attribute="peptide_lenght" withSearchBox /> 
-  <h3>Structure Type</h3> 
-    <RefinementList attribute="structure_type" withSearchBox /> 
-  <h3>Immunological background</h3>
-     <RefinementList attribute="immunological_background" withSearchBox />
-</aside>
+    <Panel>
+    <h3>MHC Allele (peptide aminoacids)</h3> 
+      <RefinementList attribute="peptide_lenght" /> 
+    <h3>Structure Type</h3> 
+      <RefinementList attribute="structure_type" /> 
+    <h3>Immunological background</h3>
+      <RefinementList attribute="immunological_background"  />
+    </Panel>
 )
 
 const Content = () => (
   <div className="content">
     <div className="info" >
       <Stats/>
-
     </div> 
   <Hits hitComponent={HitComponent}/>
   <div className="pagination">
