@@ -43,23 +43,22 @@ type Epitope = {
 
 const App = () => (
   <InstantSearch indexName="sequences" searchClient={searchClient}>
-    <main>
-      <Sidebar />      
-      <SearchBox />
-      <Content />
-    </main>
+    <h1>CROSSTOPE</h1>
+    < Sidebar />
+    <SearchBox />
+    <Content />
   </InstantSearch>
 )
 
 const Sidebar = () => (
-<div>
-  <h2>MHC Allele (peptide aminoacids)</h2> 
-  <RefinementList attribute="peptide_lenght" withSearchBox /> 
+<aside>
+   <h2>MHC Allele (peptide aminoacids)</h2> 
+    <RefinementList attribute="peptide_lenght" withSearchBox /> 
   <h2>Structure Type</h2> 
-  <RefinementList attribute="structure_type" withSearchBox /> 
+    <RefinementList attribute="structure_type" withSearchBox /> 
   <h2>Immunological background</h2>
-  <RefinementList attribute="immunological_background" withSearchBox />
-</div>
+     <RefinementList attribute="immunological_background" withSearchBox />
+</aside>
 )
 
 const Content = () => (
@@ -89,10 +88,12 @@ const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
         />
         <Highlight attribute="sequence" hit={hit} />
         <Highlight attribute="source_organism" hit={hit} />
-        <Highlight attribute="source_protein" src="source_protein" link={hit.link_para_source_protein} hit={hit} />
+        <Highlight attribute="source_protein"
+          link={hit.link_para_source_protein}
+          hit={hit} />
         <Highlight attribute="immunological_background" hit={hit} />
         <Highlight attribute="peptide_lenght" hit={hit} />
-        <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> pdb file</a>
+        <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> .pdb file</a>
     </div>
   )
 }
