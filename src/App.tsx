@@ -43,20 +43,20 @@ type Epitope = {
 
 const App = () => (
   <InstantSearch indexName="sequences" searchClient={searchClient}>
-    <h1>CROSSTOPE</h1>
-    < Sidebar />
+    <h2>CROSSTOPE</h2>
     <SearchBox />
     <Content />
+    <Sidebar />
   </InstantSearch>
 )
 
 const Sidebar = () => (
 <aside>
-   <h2>MHC Allele (peptide aminoacids)</h2> 
+   <h3>MHC Allele ola (peptide aminoacids)</h3> 
     <RefinementList attribute="peptide_lenght" withSearchBox /> 
-  <h2>Structure Type</h2> 
+  <h3>Structure Type</h3> 
     <RefinementList attribute="structure_type" withSearchBox /> 
-  <h2>Immunological background</h2>
+  <h3>Immunological background</h3>
      <RefinementList attribute="immunological_background" withSearchBox />
 </aside>
 )
@@ -81,20 +81,35 @@ const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
       flexDirection: "column",
       rowGap: "4px",
       }}>
-        <img
-          style={{ width: "100%", height: "auto" }}
-          src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
-          alt={`visual representation of pMHC ${hit.sequence}`}
-        />
-        <Highlight attribute="sequence" hit={hit} />
-        <Highlight attribute="source_organism" hit={hit} />
-        <Highlight attribute="source_protein"
-          link={hit.link_para_source_protein}
-          hit={hit} />
-        <Highlight attribute="immunological_background" hit={hit} />
-        <Highlight attribute="peptide_lenght" hit={hit} />
-        <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> .pdb file</a>
+        <div className="hit-image">
+          <img
+            style={{ width: "100%", height: "auto" }}
+            src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
+            alt={`visual representation of pMHC ${hit.sequence}`}
+          />
+        <div className="hit-sequence">
+          <Highlight attribute="sequence" hit={hit} />  
+        </div>
+        <div className="peptide">
+          <Highlight attribute="peptide_lenght" hit={hit} />
+        </div>
+        <div className="immune background">
+          <Highlight attribute="immunological_background" hit={hit} />
+        </div>
+        <div className="hit-source_organism">
+          <Highlight attribute="source_organism"
+          src={`${hit.link_para_source_protein}`}
+          hit={hit}
+          />
+        </div>
+        <div className="hit-link_para_source_protein">
+          <Highlight attribute="link_para_source_protein" hit={hit} />
+        </div>
+        <div className="pdf file">
+          <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> .pdb file</a>
+        </div>
     </div>
+  </div>
   )
 }
 
