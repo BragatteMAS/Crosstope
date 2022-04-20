@@ -52,7 +52,7 @@ const App = () => (
 
 const Sidebar = () => (
 <aside>
-   <h3>MHC Allele ola (peptide aminoacids)</h3> 
+   <h3>MHC Allele (peptide aminoacids)</h3> 
     <RefinementList attribute="peptide_lenght" withSearchBox /> 
   <h3>Structure Type</h3> 
     <RefinementList attribute="structure_type" withSearchBox /> 
