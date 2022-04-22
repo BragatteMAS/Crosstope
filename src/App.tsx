@@ -16,6 +16,7 @@ import {
 } from "react-instantsearch-dom";
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
+import './App.css';
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID,
@@ -53,27 +54,29 @@ type Epitope = {
 }
 
 const App = () => (
-  <InstantSearch indexName="sequences" searchClient={searchClient}>
-    <h2>CROSSTOPE</h2>
-    <SearchBox />
-    <Content />
-    <ClearRefinements clearsQuery />  
-    <Sidebar/>
-  </InstantSearch>
-
+  <div className="ais-InstantSearch">
+    <InstantSearch indexName="sequences" searchClient={searchClient}>
+      <div className="left-panel">
+        <ClearRefinements clearsQuery />
+        <Sidebar/>
+      </div>
+      <div className="right-panel">
+        <SearchBox />
+        <Content />
+      </div>
+    </InstantSearch>
+  </div>
 )
 
 const Sidebar = () => (
-
-  <Panel>
-  <h3>MHC Allele (peptide aminoacids)</h3> 
-    <RefinementList attribute="peptide_lenght" /> 
-  <h3>Structure Type</h3> 
-    <RefinementList attribute="structure_type" /> 
-  <h3>Immunological background</h3>
-    <RefinementList attribute="immunological_background"  />
-  </Panel>
-
+  <div className="sidebar">
+    <h3> MHC Allele</h3> <h5>(peptide aminoacids)</h5>
+      <RefinementList attribute="peptide_lenght" /> 
+    <h3>Structure Type</h3> 
+      <RefinementList attribute="structure_type" /> 
+    <h3>Immunological background</h3>
+      <RefinementList attribute="immunological_background"  />
+  </div>
 )
 
 const Content = () => (

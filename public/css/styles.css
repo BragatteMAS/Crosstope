@@ -87,20 +87,12 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-/*!
-* Adicional status for display examples from
- [ais-ecommerce-demo-app - CodeSandbox](https://codesandbox.io/s/github/algolia/doc-code-samples/tree/master/InstantSearch.js/getting-started?file=/src/app.css:53-95)
-*/
 
-.ais-ClearRefinements {
-  margin: 1em 0;
+.hit-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 0.5em;
 }
-
-.left-panel {
-  margin-left: 0px;
-}
-
-
 
 hr {
   margin: 1rem 0;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Metadata and Links-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,30 +11,35 @@
     />
     <meta name="author" content="Bragatte" />
     
-    <title>Crosstope</title>
-    
     <!-- or include the full Satellite theme -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
     
-    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/img/favicon.ico" />
-    <link rel="icon" href="%PUBLIC_URL%/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/img/logo_crosstope_192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- css theme -->
+    <!-- 
+      <link rel="stylesheet" href="./src/index.css" />
+      <link rel="stylesheet" href="./src/app.css" /> 
+    -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="icon" type="image/x-icon" href="./%PUBLIC_URL%/img/favicon.ico" />
+    <link rel="icon" href="./%PUBLIC_URL%/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./%PUBLIC_URL%/img/logo_crosstope_192.png" />
+    <link rel="manifest" href="./%PUBLIC_URL%/manifest.json" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+    
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="%PUBLIC_URL%/css/styles.css" rel="stylesheet" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55120145-4"></script>
+    
     
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -42,43 +48,74 @@
   
       gtag('config', 'UA-55120145-4');
     </script> 
+
+    <!-- url name -->
+    <title>Crosstope</title>
+    
   </head>
-  
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
-    <a class="navbar-brand js-scroll-trigger" href="index.html">
-      <img src="%PUBLIC_URL%/img/logo_crosstope_192.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-      Crosstope
-    </a> 
-    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Charts">
-          <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span class="nav-link-text">Charts</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Tables">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span class="nav-link-text">Tables</span>
-          </a>
-        </li>
-      </ul>
+<!-- Body config  -->
+<body>
+  <h3>Crosstope</h3>
+    <div id="root"> </div>
+  </body> 
+
+<!-- Navigation toolbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+  <a class="navbar-brand js-scroll-trigger" href="index.html">
+    <img src="%PUBLIC_URL%/img/logo_crosstope_192.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Crosstope
+  </a> 
+  <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="NBLI">
+        <a class="nav-link" href="./about.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span class="nav-link-text">About</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Tables">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span class="nav-link-text">Tables</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Page Content-->
+<!-- About-->
+<section class="resume-section" id="about">
+  <div class="resume-section-content">
+    <h1 class="mb-0">
+      <span class="text-primary">Marcelo A. S. Bragatte</span>
+    </h1>
+    <div class="subheading mb-5">
+      Charqueadas, RS, Brazil
+      <a href="mailto:marcelobragatte@gmail.com">marcelobragatte@gmail</a>
     </div>
-  </nav>
-  
-  <body>
-    <div class="left-panel">
-      <div id="clear-refinements"></div>
-      <div id="RefinementList"></div>
-      
+    <p class="lead mb-5"> I am a Researcher, and Ph.D.student  at <a href="http://www.ufrgs.br/ppgbm/ensino-e-pesquisa/corpo-discente/page/7/">UFRGS / PPGBM</a> currently living in Charqueadas, State of Rio Grande do Sul, Brazil. My areas of interests include Immunology, Genetics, Vaccinomics, and applications with bioinformatics. I am also interested in machine learning, deep learning, epidemiology, and scientific dissemination.</p>
+    <p class="lead mb-5"> Currently I am coordinator of <a href="https://redeaanalisecovid.wordpress.com/equipe/">Rede Análise</a> a voluntary initiative to research and disseminate referenced information about COVID-19 and coordinator of <a href="https://pintofscience.com.br/equipe/Porto%20Alegre">Pint of Science Porto Alegre</a>. </p>
+    <div class="social-icons">
+      <a class="social-icon" href="https://www.linkedin.com/in/bragatte/">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="social-icon"  href="https://github.com/BragatteMAS">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="social-icon"  href="https://twitter.com/MarceloBragatte">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="social-icon"  href="https://www.facebook.com/BragatteMAS">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-icon"  href="https://wa.me/5551997180058">
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
-  </div>  
-  <div id="root" >
-</body> 
+  </div>
+</section>
 
 </html>
