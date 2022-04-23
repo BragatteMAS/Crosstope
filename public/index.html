@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Metadata and Links-->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-    name="description"
-    content="Crosstope Structural Data Bank"
-    />
-    <meta name="author" content="Bragatte" />
-    
-    <!-- or include the full Satellite theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
-    
-    <!-- css theme -->
-    <!-- 
-      <link rel="stylesheet" href="./src/index.css" />
-      <link rel="stylesheet" href="./src/app.css" /> 
-    -->
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <link rel="icon" type="image/x-icon" href="./%PUBLIC_URL%/img/favicon.ico" />
-    <link rel="icon" href="./%PUBLIC_URL%/img/favicon.ico" />
-    <link rel="apple-touch-icon" href="./%PUBLIC_URL%/img/logo_crosstope_192.png" />
-    <link rel="manifest" href="./%PUBLIC_URL%/manifest.json" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55120145-4"></script>
-    
-    
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta
+  name="description"
+  content="Crosstope Structural Data Bank"
+  />
+  <meta name="author" content="Bragatte" />
   
-      gtag('config', 'UA-55120145-4');
-    </script> 
+  <!-- or include the full Satellite theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+  
+  <!-- css theme -->
+  <!-- 
+    <link rel="stylesheet" href="./src/app.css" /> 
+    <link rel="stylesheet" href="./src/index.css" />
+  -->
+  <link rel="stylesheet" href="./css/styles.css" />
 
-    <!-- url name -->
-    <title>Crosstope</title>
+  <link rel="icon" type="image/x-icon" href="./%PUBLIC_URL%/img/favicon.ico" />
+  <link rel="icon" href="./%PUBLIC_URL%/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="./%PUBLIC_URL%/img/logo_crosstope_192.png" />
+  <link rel="manifest" href="./%PUBLIC_URL%/manifest.json" />
+  <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+  -->
+  
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55120145-4"></script>
+  
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55120145-4');
+  </script> 
+
+  <!-- url name -->
+  <title>Crosstope</title>
     
-  </head>
+</head>
+
 <!-- Body config  -->
-<body>
-  <h3>Crosstope</h3>
+<body>  
+  <!-- <h3>Crosstope</h3> -->
     <div id="root"> </div>
-  </body> 
+
+  <!-- Import functionalities for js and type detection-->
+    <!-- <script type="text/javascript" src="./js/app.js"></script>
+    <script type="module" src="main.txt></script>" ></script> -->
+</body> 
 
 <!-- Navigation toolbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
@@ -70,16 +75,16 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="NBLI">
-        <a class="nav-link" href="./about.html">
+      <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Methods">
+        <a class="nav-link" href="./tools">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span class="nav-link-text">About</span>
+          <span class="nav-link-text">Tools</span>
         </a>
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="left" title="Tables">
-        <a class="nav-link" href="tables.html">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="NBLI">
+        <a class="nav-link" href="./about">
           <i class="fas fa-fw fa-table"></i>
-          <span class="nav-link-text">Tables</span>
+          <span class="nav-link-text">About</span>
         </a>
       </li>
     </ul>
@@ -116,6 +121,96 @@
       </a>
     </div>
   </div>
+</section>
+
+<!-- Skills-->
+<section class="resume-section" id="skills">
+  <div class="resume-section-content">
+    <h2 class="mb-5">Skills</h2>
+    <div class="subheading mb-3">General Skills</div>
+    <ul class="list-inline dev-icons">
+      <li class="list-inline-item">
+        <i class="fas fa-graduation-cap"></i>
+      </li>
+    </ul>
+    <ul class="fa-ul mb-0">
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Portuguese, English</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Scientific Method</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Data Analysis</li>
+    </ul>
+    <h2 class="mb-5"></h2>
+
+    <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+    <ul class="list-inline dev-icons">
+      <li class="list-inline-item">
+        <i class="fab fa-git"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-python"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-r-project""></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fab fa-linux"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fas fa-chart-line"></i>
+      </li>
+      <li class="list-inline-item">
+        <i class="fas fa-code"></i>
+      </li>
+    </ul>
+    <ul class="fa-ul mb-0">
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Python, R, HTML5, CSS3#</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Jupyter, Google Colab</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        PowerBI, Tableau</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Git, Github</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Zotero, Latex, Overleaf</li>
+      <li>
+        <i class="fa-li fa fa-check"></i>
+        Linux</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Works-->
+<section class="resume-section" id="curriculum">
+  <div class="resume-section-content">
+    <h2 class="mb-5">Curriculum</h2>  
+      <div class="social-icons mb-3">
+			<a class="social-icon"  href="https://orcid.org/0000-0001-6031-4755">
+				<i class="fab fa-orcid"></i>
+			</a>
+			<a class="social-icon" href="https://www.researchgate.net/profile/Marcelo-Bragatte">
+				<i class="fab fa-researchgate"></i>
+			</a>
+      <a class="social-icon"  href="http://lattes.cnpq.br/9594590199370154">
+        <i class="ai ai-lattes"></i>
+      </a>
+      </div>
+      <div class="subheading mb-3"><i class="fas fa-newspaper"></i> curriculum</div>
+    <ul class="fa-ul mb-0">
+      <li><i class="fa-li fa fa-check"></i><a href="https://drive.google.com/file/d/1XiLQijP1GWn2YPXAK4f-lclzucz8m1tZ/view?usp=sharing">Github.io created to make available the pdf file of the curriculum as requested for the post-doctoral position in Bioinformatics at Instituto Todos pela Saúde (ITpS)".</a><br />2022</li>
+      <img src="https://i.imgur.com/h7tcSm3.png" alt="" width=600 height=400>
+    </ul>
+  </div>  
 </section>
 
 </html>

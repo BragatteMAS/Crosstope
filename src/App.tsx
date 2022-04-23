@@ -10,9 +10,8 @@ import {
   Pagination,
   DynamicWidgets,
   Panel,
-/*   AttributesToRender,
   SortBy,
-  Menu, */
+  Menu
 } from "react-instantsearch-dom";
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
@@ -24,11 +23,6 @@ const searchClient = algoliasearch(
 )
 
 const index = searchClient.initIndex("sequences");
-
-/* index.setSettings({
-  attributesForFaceting: [""]
-}); */
-
 type Epitope = {
   sequence: string
   epitope_id_by_iedb: string
@@ -55,6 +49,7 @@ type Epitope = {
 
 const App = () => (
   <div className="ais-InstantSearch">
+    <h3>Crosstope</h3>
     <InstantSearch indexName="sequences" searchClient={searchClient}>
       <div className="left-panel">
         <ClearRefinements clearsQuery />
@@ -66,15 +61,16 @@ const App = () => (
       </div>
     </InstantSearch>
   </div>
+
 )
 
 const Sidebar = () => (
   <div className="sidebar">
-    <h3> MHC Allele</h3> <h5>(peptide aminoacids)</h5>
+    <h5> MHC Allele </h5>
       <RefinementList attribute="peptide_lenght" /> 
-    <h3>Structure Type</h3> 
+    <h5>Structure Type</h5> 
       <RefinementList attribute="structure_type" /> 
-    <h3>Immunological background</h3>
+    <h5>Immunological background</h5>
       <RefinementList attribute="immunological_background"  />
   </div>
 )
