@@ -93,30 +93,61 @@ const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
       rowGap: "4px",
       }}>
         <div className="hit-image">
-          <img
-            style={{ width: "100%", height: "auto" }}
-            src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
-            alt={`visual representation of pMHC ${hit.sequence}`}
-          />
+          <a href={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`} target="_blank" download={hit.complex_code}>
+            <img
+              src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
+              style={{ width: "100%", height: "auto" }}
+              alt={`visual representation of pMHC ${hit.sequence}`}
+            />
+          </a>
+        <div className="pdf file">
+          <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}>
+            <img
+             src="../img/pdb.svg"
+             style={{float:"right",margin:"-15px", width: "42%" }}
+             alt="pdb file from epitope sequence for download"
+             />
+          </a>
+        </div >
         <div className="hit-sequence">
-          <Highlight attribute="sequence" hit={hit} />  
+          <Highlight
+           attribute="sequence"
+           hit={hit} />
         </div>
         <div className="peptide">
-          <Highlight attribute="peptide_lenght" hit={hit} />
+          <Highlight
+           attribute="peptide_lenght"
+           hit={hit} />
+        </div>
+        <div className="hit-structure">
+          <Highlight
+           attribute="structure_type"
+           hit={hit} />
         </div>
         <div className="immune background">
-          <Highlight attribute="immunological_background" hit={hit} />
+          <a href={hit.link_epitope_id_by_iedb} target="_blank" >
+          <Highlight
+           attribute="immunological_background"
+           hit={hit} />
+          </a>
         </div>
+        <div className="source_protein">
+          <a href={hit.link_para_source_protein} target="_blank" >
+          <Highlight
+          attribute="source_protein"
+          hit={hit}
+          />
+          </a>
         <div className="source_organism">
-          <Highlight attribute="source_organism" hit={hit} />
+          <a href={hit.link_para_reference} target="_blank"> 
+          <Highlight
+           attribute="source_organism"
+           hit={hit}
+          />
+          </a>
         </div>
-        <div className="hit-link_para_source_protein">
-          <Highlight attribute="link_para_source_protein" hit={hit} />
         </div>
-        <div className="pdf file">
-          <a href={`https://storage.googleapis.com/crosstopecloud/Complexos/${hit.complex_code}.pdb`} download={hit.complex_code}> .pdb file</a>
-        </div>
-    </div>
+      </div>
   </div>
   )
 }
