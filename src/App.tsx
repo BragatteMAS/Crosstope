@@ -8,21 +8,19 @@ import {
   SearchBox,
   Stats,
   Pagination,
-  DynamicWidgets,
-  Panel,
-  SortBy,
-  Menu
 } from "react-instantsearch-dom";
 import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
 import './App.css';
+
 
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID,
   process.env.REACT_APP_ALGOLIA_API_KEY
 )
 
-const index = searchClient.initIndex("sequences");
+/* const index = searchClient.initIndex("sequences"); //alternative to index from algoliasearch */
+
 type Epitope = {
   sequence: string
   epitope_id_by_iedb: string
@@ -109,11 +107,8 @@ const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
         <div className="immune background">
           <Highlight attribute="immunological_background" hit={hit} />
         </div>
-        <div className="hit-source_organism">
-          <Highlight attribute="source_organism"
-          src={`${hit.link_para_source_protein}`}
-          hit={hit}
-          />
+        <div className="source_organism">
+          <Highlight attribute="source_organism" hit={hit} />
         </div>
         <div className="hit-link_para_source_protein">
           <Highlight attribute="link_para_source_protein" hit={hit} />

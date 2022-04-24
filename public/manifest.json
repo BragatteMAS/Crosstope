@@ -8,9 +8,9 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo-genetica-ufrgs.png",
+      "src": "logo_crosstope_192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "195x182"
     }
   ],
   "start_url": ".",
