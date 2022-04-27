@@ -22,174 +22,215 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-
-    <!-- url name -->
-    <title> Crosstope </title>
-
-
+    
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    
+    <!-- url name -->
+    <title> Crosstope </title>
 
   </head>
 
-  <body id="page-top">
+<body id="pMHC_search">  
+  <div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-12">
+                  <br>
+                  <h2 class="text-center mb-1">Crosstope Structural Data Bank</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="text-center">
+                  
   <div id="root"> </div>
 <!-- Navigation toolbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <a class="navbar-brand js-scroll-trigger" href="#pMHC_search">
       <span class="d-block d-lg-none">Crosstope</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid  mx-auto mb-2" src="img/logo_crosstope_192.png" alt="">
+        <img class="img-fluid  mx-auto mb-2 d-inline-block align-top" src="%PUBLIC_URL%/img/logo_crosstope_192.png" height="35"  loading="lazy">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav">
-		    <li class="nav-item">
-          <a href="http://BragatteMAS.github.io/"><span class="flag-icon flag-icon-us" alt="English"> </span></a>
-          <a href="http://BragatteMAS.github.io/pt-br/"><span class="flag-icon flag-icon-br" alt="Portuguese"> </span></a>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">
+            About | What & Why
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          <a class="nav-link js-scroll-trigger" href="#tools">
+            Tools | How
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#curriculum">curriculum</a>
+          <a class="nav-link js-scroll-trigger" href="#reference"> References | Who</a>
         </li>
       </ul>
     </div>
+    <!-- 
+    <div class="bottom">
+      <a href="" class="icon solid fa-envelope"><span class="label"></span></a>
+    </div>
+     -->
   </nav>
         
 <!-- Page Content-->
-<div class="container-fluid p-0">
-<!-- About-->
-<section class="resume-section" id="about">
-  <div class="resume-section-content">
-    <h1 class="mb-0">
-      <span class="text-primary">Marcelo A. S. Bragatte</span>
-    </h1>
-    <div class="subheading mb-5">
-      Charqueadas, RS, Brazil
-      <a href="mailto:marcelobragatte@gmail.com">marcelobragatte@gmail</a>
+  <div class="container-fluid p-0">
+  
+  <!-- About-->
+  <section
+   class="resume-section"
+   style="margin-left:auto; margin-right:auto; display:center;" 
+   id="about" >
+    <div class="resume-section-content ">
+      <h1 class="mb-0">
+        <span class="text-primary">Presentation</span>
+      </h1>
+        <p >
+            <br></br>
+            The <b>Structural Data Bank for Cross-Reactivity</b> is a curate repository of three-dimensional structures of MHC: epitope complexes, focused on immunogenicity, similarity relationships and cross-reactivity prediction. <br></br>
+            <a>
+                Cellular immunity has a major role in the surveillance against viral infections. Through the interaction between the T Cell Receptor (TCR) and the Major Histocompatibility Complex (MHC), Cytotoxic T Lymphocytes (CTL) are able to recognize viral peptides presented in the cells surface, and thus, eliminate the infected cells. Each TCR is able to interact with thousands of MHC:epitope complexes, but few of these interactions will trigger a CTL response. The capacity of a given T lymphocyte to recognizedifferent peptides in the cleft of a given MHC is defined as Cross-Reactivity, and it has great influence over phenomena such as heterologous immunity and molecular mimicry.
+                <br></br>
+                The CrossTope is a curate repository of three-dimensional structures of MHC:epitope complexes, focused on immunogenicity, similarity relashionships and cross-reactivity prediction. Our main idea is that immunogenic epitopes share characteristics that stimulates a Citotoxic T Lymphocyte to respond againstdifferent peptides presented by a given MHC allele. The complexes hosted by these databank were obtained by large-scale in silico construction of three-dimensional models of MHC:peptide complexes, using a new approach developed by our group (D1-EM-D2, Antunes et al, 2010). This structural dataset allowed us to verify that the TCR-interaction surface of pMHC complexes has a shared pattern of charge distribution among complexes with recognized cross-reactivity.
+            </a>
+        </p>
     </div>
-    <p class="lead mb-5"> I am a Researcher, and Ph.D.student  at <a href="http://www.ufrgs.br/ppgbm/ensino-e-pesquisa/corpo-discente/page/7/">UFRGS / PPGBM</a> currently living in Charqueadas, State of Rio Grande do Sul, Brazil. My areas of interests include Immunology, Genetics, Vaccinomics, and applications with bioinformatics. I am also interested in machine learning, deep learning, epidemiology, and scientific dissemination.</p>
-    <p class="lead mb-5"> Currently I am coordinator of <a href="https://redeaanalisecovid.wordpress.com/equipe/">Rede Análise</a> a voluntary initiative to research and disseminate referenced information about COVID-19 and coordinator of <a href="https://pintofscience.com.br/equipe/Porto%20Alegre">Pint of Science Porto Alegre</a>. </p>
-    <div class="social-icons">
-      <a class="social-icon" href="https://www.linkedin.com/in/bragatte/">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a class="social-icon"  href="https://github.com/BragatteMAS">
-        <i class="fab fa-github"></i>
-      </a>
-      <a class="social-icon"  href="https://twitter.com/MarceloBragatte">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a class="social-icon"  href="https://www.facebook.com/BragatteMAS">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a class="social-icon"  href="https://wa.me/5551997180058">
-        <i class="fab fa-whatsapp"></i>
-      </a>
+  </section>  
+  
+  <!-- Tools -->
+  <section
+  class="resume-section"
+  style="margin-left:auto; margin-right:auto; display:center;" 
+  id="tools">
+    <div class="resume-section-content">
+      <h1 class="mb-0">
+        <span class="text-primary">Tools</span>
+      </h1>
+        <div class="content">
+            <div class="div-section">
+                <div class="subheading mb-1">
+                  <h4> DOCKTOPE </h4>
+                </div>
+                <div class="tool-description"> 
+                    DockTope is a web-based tool, based on D1-EM-D2 approach, intended to allow the pMHC-I modeling.
+                </div>
+                <br>
+                <div class="Docktope-tool">
+                    <a href="http://tools.iedb.org/docktope/"> <img src="./img/logo_docktope.png" width="20%" alt="Doctope link" /></a>
+                </div>
+            </div>
+        </div>
+  
+        <br></br>    
+  
+    <div class="div-section">
+        <div class="subheading mb-1">
+          <h4>Financial Support</h4>		
+        </div>
+        <div class="text-financial"> 
+          Funded by a grant from Bill & Melinda Gates Foundation through the Grand Challenges Exploration Initiative (grant #53049).
+          <br>
+           Supported by two Brazilian Agencies: CAPES/PNPD (23038.035722/2008-19) and CNPq.
+        </div>
+        <img src="./img/financial-support.png" border="0" class="financial" />
+    </div>            
     </div>
-  </div>
-</section>
+  </section>
+  
+  <!-- References -->
+  <section
+    class="resume-section"
+    style="margin-left:auto; margin-right:auto; display:center;" 
+    id="reference" >
+    <div class="resume-section-content">
+      <h1 class="mb-0">
+        <span class="text-primary">References</span>
+      </h1>
 
-<!-- Skills-->
-<section class="resume-section" id="skills">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Skills</h2>
-    <div class="subheading mb-3">General Skills</div>
-    <ul class="list-inline dev-icons">
-      <li class="list-inline-item">
-        <i class="fas fa-graduation-cap"></i>
-      </li>
-    </ul>
-    <ul class="fa-ul mb-0">
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Portuguese, English</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Scientific Method</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Data Analysis</li>
-    </ul>
-    <h2 class="mb-5"></h2>
-
-    <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-    <ul class="list-inline dev-icons">
-      <li class="list-inline-item">
-        <i class="fab fa-git"></i>
-      </li>
-      <li class="list-inline-item">
-        <i class="fab fa-python"></i>
-      </li>
-      <li class="list-inline-item">
-        <i class="fab fa-r-project""></i>
-      </li>
-      <li class="list-inline-item">
-        <i class="fab fa-linux"></i>
-      </li>
-      <li class="list-inline-item">
-        <i class="fas fa-chart-line"></i>
-      </li>
-      <li class="list-inline-item">
-        <i class="fas fa-code"></i>
-      </li>
-    </ul>
-    <ul class="fa-ul mb-0">
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Python, R, HTML5, CSS3#</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Jupyter, Google Colab</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        PowerBI, Tableau</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Git, Github</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Zotero, Latex, Overleaf</li>
-      <li>
-        <i class="fa-li fa fa-check"></i>
-        Linux</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Works-->
-<section class="resume-section" id="curriculum">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Curriculum</h2>  
-      <div class="social-icons mb-3">
-			<a class="social-icon"  href="https://orcid.org/0000-0001-6031-4755">
-				<i class="fab fa-orcid"></i>
-			</a>
-			<a class="social-icon" href="https://www.researchgate.net/profile/Marcelo-Bragatte">
-				<i class="fab fa-researchgate"></i>
-			</a>
-      <a class="social-icon"  href="http://lattes.cnpq.br/9594590199370154">
-        <i class="ai ai-lattes"></i>
-      </a>
+      <div class="subheading mb-1">
+        <h3> Research group</h3>
       </div>
-      <div class="subheading mb-3"><i class="fas fa-newspaper"></i> curriculum</div>
-    <ul class="fa-ul mb-0">
-      <li><i class="fa-li fa fa-check"></i><a href="https://drive.google.com/file/d/1XiLQijP1GWn2YPXAK4f-lclzucz8m1tZ/view?usp=sharing">Github.io created to make available the pdf file of the curriculum as requested for the post-doctoral position in Bioinformatics at Instituto Todos pela Saúde (ITpS)".</a><br />2022</li>
-      <img src="https://i.imgur.com/h7tcSm3.png" alt="" width=600 height=400>
-    </ul>
-  </div>  
-</section>
+        <p>The NBLI - <i>Núcleo de Bioinformática do Laboratório de Imunogenética</i> - is a research team focused on immunological mechanisms triggered by viral infections, specially in the identification of possible patterns that can be used as viral targets. </p>
+
+      <div class="content">
+        <div class="div-section">
+            <span class="section"> </span>
+            <div class="subheading mb-1">
+              <h4> How to cite this database </h4> 
+            </div>
+              <h5>
+                 <a href="https://academic.oup.com/database/article/doi/10.1093/database/bat002/329916">
+                 CrossTope: a curate repository of 3D structures of immunogenic peptide: MHC complexes
+                </a>
+              </h5>
+              <p>
+                <a href="http://lattes.cnpq.br/5450809564180533"> Sinigaglia, M.</a>, <a href="https://dinlerantunes.com/communication/">Antunes, D. A.</a>, <a href="http://lattes.cnpq.br/4948877541502725"> Rigo, M. M. </a>,<a href="http://lattes.cnpq.br/9325091115265469"> Chies, J. A. B.</a> and  <a href="http://lattes.cnpq.br/3422083629914698">Vieira, G. F.</a><br/>
+                Database, 2013. doi: 10.1093/database/bat002
+                </a>
+              </p>
+        </div>  
+
+        <div class="div-section">
+        <div class="content">
+          <div class="div-section">
+              <span class="section"> </span>
+							<div class="row">
+                <div class="column">
+                  <h5>Gustavo Fioravanti Vieira</h5>
+                  <a href="img/p_fioravanti.jpg" class="image">
+                    <img
+                      src="img/p_fioravanti.jpg"
+                      width="30%"
+                      alt="main investigator" />
+                  </a>
+                    <p>Main investigator
+                    <div class="social-icons">
+                      <a class="social-icon" href="https://www.linkedin.com/in/gustavo-fioravanti-vieira-34337360/"> 
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                    </p>
+                </div>
+
+                <div class="column">
+                  <h5>Marcelo A. S. Bragatte</h5>
+                  <a href="img/p_bragatte.jpg" class="image">
+                    <img
+                    src="img/p_bragatte.jpg" 
+                    width="28%"
+                    alt="database maintainer researcher"
+                    />
+                    </a>
+                      <p>Database maintainer researcher                       
+                        <div class="social-icons">
+                          <a class="social-icon" href="https://www.linkedin.com/in/bragatte/"> 
+                            <i class="fab fa-linkedin-in"></i>
+                          </a>
+                          <a class="social-icon"  href="https://github.com/BragatteMAS">
+                            <i class="fab fa-github"></i>
+                          </a>
+                        </div>
+                      </p> 
+                </div>
+              </div>
+  </section>
+
+</div> <!-- /.container -->
 
 <!-- Scripts -->
   <script>
@@ -202,8 +243,8 @@
 
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- lattes icon -->
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -214,6 +255,6 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55120145-4"></script>
 
-</body>
+  </body>
 
 </html>

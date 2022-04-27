@@ -47,7 +47,6 @@ type Epitope = {
 
 const App = () => (
   <div className="ais-InstantSearch">
-    <h3>Crosstope</h3>
     <InstantSearch indexName="sequences" searchClient={searchClient}>
       <div className="left-panel">
         <ClearRefinements clearsQuery />
