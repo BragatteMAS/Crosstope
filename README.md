@@ -24,7 +24,7 @@ The Structural Data Bank for Cross-Reactivity is a curate repository of three-di
 4 - Refinement Search
 ## Authors
 
-- [Bragatte github](https://github.com/BragatteMAS)
+- [Bragatte](https://www.linkedin.com/in/bragatte/)
 
 - Consulting on programming and website development from [frontendwizard (Juliano Farias)](https://github.com/frontendwizard)
 
