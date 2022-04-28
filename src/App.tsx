@@ -13,7 +13,6 @@ import "instantsearch.css/themes/algolia.css"
 import { Hit } from "react-instantsearch-core"
 import './App.css';
 
-
 const searchClient = algoliasearch(
   process.env.REACT_APP_ALGOLIA_APP_ID,
   process.env.REACT_APP_ALGOLIA_API_KEY
@@ -124,21 +123,21 @@ const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
            hit={hit} />
         </div>
         <div className="immune background">
-          <a href={hit.link_epitope_id_by_iedb} target="_blank" >
+          <a href={hit.link_epitope_id_by_iedb} target="_blank" rel="noreferrer, nofollow, noopener, external" >
           <Highlight
            attribute="immunological_background"
            hit={hit} />
           </a>
         </div>
         <div className="source_protein">
-          <a href={hit.link_para_source_protein} target="_blank" >
+          <a href={hit.link_para_source_protein} target="_blank" rel="noreferrer, nofollow, noopener, external" >
           <Highlight
           attribute="source_protein"
           hit={hit}
           />
           </a>
         <div className="source_organism">
-          <a href={hit.link_para_reference} target="_blank"> 
+          <a href={hit.link_para_reference} target="_blank" rel="noreferrer, nofollow, noopener, external"> 
           <Highlight
            attribute="source_organism"
            hit={hit}
