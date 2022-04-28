@@ -92,7 +92,7 @@ const HitComponent = ({ hit }: { hit: Hit<Epitope> }) => {
       rowGap: "4px",
       }}>
         <div className="hit-image">
-          <a href={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`} target="_blank" download={hit.complex_code}>
+          <a href={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`} target="_blank" rel="noreferrer, nofollow, noopener, external" download={hit.complex_code}>
             <img
               src={`https://storage.googleapis.com/crosstopecloud/V5/${hit.complex_code}_V5.jpg`}
               style={{ width: "100%", height: "auto" }}
