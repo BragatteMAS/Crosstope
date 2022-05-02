@@ -1,7 +1,7 @@
 
 # Crosstope
 
-Available https://crosstope.vercel.app/
+Available https://crosstope.com.br or https://crosstope.vercel.app/
 
 The Structural Data Bank for Cross-Reactivity is a curate repository of three-dimensional structures of MHC: epitope complexes, focused on immunogenicity, similarity relationships and cross-reactivity prediction.
 
