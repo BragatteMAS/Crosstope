@@ -83,6 +83,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Searc system by Algolia
+### Search system by Algolia
 
 You can learn more in the [Site Search & Discovery powered by AI | Algolia](https://www.algolia.com/?utm_source=google&utm_medium=cpc_brand&utm_campaign=SignupTrial_Google_NAM_Search_BR&utm_content=free-trial&utm_term=algolia&_bt=416228088360&_bk=algolia&_bm=e&_bn=g&_bg=79897981418)
