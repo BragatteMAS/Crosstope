@@ -11434,19 +11434,4 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-  
-/* Estilos padrão da barra lateral */
-.sidebar {
-  width: 25%; /* Defina a largura da barra lateral aqui */
-  float: left;
-}
-
-/* Estilos da barra lateral para telas menores que 768px */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%; /* Defina a largura da barra lateral para ocupar toda a largura da tela */
-    float: none;
-  }
-}
-
 }
