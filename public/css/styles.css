@@ -11422,6 +11422,66 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
+/* Flex Container for Tools */
+.tools-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Styling for each tool card */
+.tool-card {
+  flex-basis: 50%; /* Each tool takes up half of the container width */
+  text-align: center; /* Center-align the text */
+  padding: 0 10px; /* Adds padding inside each tool card */
+}
+
+.tool-card img {
+  width: 100%; /* Image takes the full width of the tool card */
+  max-width: 200px; /* Optionally, limit the image size */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Images are block level to allow for margin usage */
+  margin: 0 auto; /* Centers the image within the tool card */
+}
+
+.financial-support {
+  text-align: center;
+}
+
+.financial-image-container {
+  display: flex;
+  justify-content: center; /* This will center the child img element */
+}
+
+.financial-image-container img {
+  max-width: 100%; /* Ensures image is not larger than its container */
+  height: auto; /* Maintains aspect ratio */
+}
+ /* References Section Styling */
+#reference .resume-section-content {
+  text-align: center;
+}
+
+#reference .div-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#reference .row .column {
+  margin: 0 auto; /* Centers the column if it has a set width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns the flex children (e.g., images, text) in the center */
+}
+
+#reference .social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+
 /* @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
